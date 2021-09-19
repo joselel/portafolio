@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "portafolio-6389c"
+  },
+  "targets": {
+    "portafolio-6389c": {
+      "hosting": {
+        "portafolio": [
+          "portafolio-6389c"
+        ]
+      }
+    },
+    "alhuma-admin": {
+      "hosting": {
+        "portafolio": [
+          "alhuma-admin"
+        ]
+      }
+    }
+  }
+}

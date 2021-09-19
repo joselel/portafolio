@@ -1,0 +1,24 @@
+
+<div class="container shadow-lg p-3 mb-5 bg-light rounded">
+
+  <h1>{{this.project.name_project}}</h1><hr>
+  <h2>Descripcion de proyecto</h2>
+  <p>{{this.project.description_project}}</p>
+  <hr>
+  <h2>Tecnologias utilizadas en el proyecto</h2>
+  <ul *ngFor="let item of this.project.languages">
+    <li>
+      {{item}}
+    </li>
+  </ul>
+  <hr>
+  <h2>Enlaces de proyectos</h2>
+
+  <div class="container ">
+      <a class="nav-link text-dark" href="{{this.project.link_github}}"><i class="bi bi-github"></i></a>
+      <a class="nav-link text-dark" href="{{this.project.link_video}}"><i class="bi bi-youtube  "></i> </a>
+  </div>
+      <div class="">
+      <iframe width="800px" height="350px"  src="https://youtu.be/gxr7PW63AIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container shadow-lg p-3 mb-5 bg-light rounded">
+<div class=" row container col-md-12">
+
+  <div class="container col-md-3">
+    <img class="img-fluid" src="assets/img/perfil.png" alt="">
+  </div>
+  <div class="container col-md-8">
+
+    <mat-form-field class="col-md-8" appearance="fill">
+      <mat-label>Ingresa tu correo electronico</mat-label>
+      <input matInput placeholder="pedro@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+<br>
+    <mat-form-field class="col-md-8" appearance="fill">
+      <mat-label>Ingresa tu contraseña</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+<br>
+<button mat-raised-button color="primary"><mat-icon>login</mat-icon> Ingresar</button>
+  </div>
+
+</div>
+
+</div>

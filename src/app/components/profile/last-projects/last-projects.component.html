@@ -1,0 +1,26 @@
+<div class=" p-3 mb-5 bg-light rounded">
+  <div class="row">
+    <div class="card mb-3 shadow-lg" style="max-width: 540px;" *ngFor="let project of projects">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{project.photo}}" class="img-fluid rounded-start" alt="Imagen Proyecto">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title">{{ project.name_project }}</h3>
+            <p class="card-text"><small class="text-muted">{{project.description_project}}</small></p>
+            <div class="card-footer">
+              <i>creado en {{ project.fechaCreacion.toDate() | date:'dd/MM/yyyy h:mm:ss a' }}</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container m-auto">
+<a mat-list-item routerLink="/proyectos" class="btn btn-success" style="font-size: 20px;">
+  Ver mas proyectos
+</a>
+</div>
+

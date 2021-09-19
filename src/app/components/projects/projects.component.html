@@ -1,0 +1,19 @@
+<div class="container shadow-lg p-3 mb-5 bg-light rounded">
+
+  <div class="row">
+    <div class=" col " *ngFor="let project of projects">
+    <div  class="card p-1 ml-1 mt-2 mb-2 shadow-lg" style="width: 18rem;">
+      <img src="{{project.photo}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title">{{ project.name_project }}</h2>
+
+        <p class="card-text">{{project.description_project}}</p>
+
+        <button [routerLink]="['/proyecto', project.id]" type="button" class="btn btn-warning">
+         Ver a detalle
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

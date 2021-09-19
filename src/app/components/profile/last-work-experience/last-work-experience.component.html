@@ -1,0 +1,32 @@
+<div class=" p-3 mb-5 bg-light rounded">
+  <div class="row">
+    <div class="card mb-3 shadow-lg" style="max-width: 540px;" *ngFor="let work of works">
+      <div class="row g-0">
+        <div class="col-md-3">
+          <img src="{{work.image}}" class="img-fluid" alt="Imagen de empresa">
+        </div>
+        <div class="col-md-9">
+          <div class="card-header">
+            <i>inicio en
+              {{meses[work.fechaInicio.toDate().getMonth()]}}, {{work.fechaInicio.toDate() | date: 'yyyy'}}
+               hasta
+              {{meses[work.fechaFin.toDate().getMonth()]}}, {{work.fechaFin.toDate() | date: 'yyyy'}}
+              </i>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{work.company}}</h3>
+            <p class="card-text"><small class="text-muted">Descripción de puesto: <br>{{work.description_activity}}</small></p>
+            <ul *ngFor="let item of work.activity">
+              <li>
+                {{item}}
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <i>{{work.location}}</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

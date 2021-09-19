@@ -1,0 +1,12 @@
+<h5 class="text-center" style="margin-top: 30px;" *ngIf="hobbies.length == 0">No hay hobbies para mostrar</h5>
+
+<ul class="nav justify-content-center">
+
+  <li class="nav-item text-center text-primary" *ngFor="let hobbie of hobbies">
+    <div class="container">
+    <mat-icon>{{hobbie.icon}}</mat-icon>
+    <p>{{hobbie.name}}</p>
+  </div>
+  </li>
+
+</ul>
