@@ -13,17 +13,21 @@ export class ProfileComponent implements OnInit {
   
   id: string|null = 'y4CKkNFqYuwAFcuNWiji';
   perfil = new profile();
-  load: boolean = true;
+  load: boolean;
 
-  constructor(private _perfilService: PerfilService) {}
-
-  ngOnInit(): void{
-    this.getDataProfile()
+  constructor(private _perfilService: PerfilService) {
+    this.load = true;
   }
 
-  async getDataProfile(){
-    await this._perfilService.getPerfil(this.id)
-        .subscribe(data => {this.perfil = data.payload.data()});
+  ngOnInit(): void{
+    this.getDataProfile();
+  }
+
+  getDataProfile(){
+      this._perfilService.getPerfil(this.id)
+      .subscribe(data => {
+        this.perfil = data.payload.data()
+        this.load = false});
   }
 
   showmodal(){

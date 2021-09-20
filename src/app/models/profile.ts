@@ -10,10 +10,10 @@ export class profile{
 }
 
 export class name{
-    first_name:string;
-    second_name:string;
-    first_lastname:string;
-    second_lastname:string;
-    about_me: string;
-    photo_profile: string;
+    first_name:string = '';
+    second_name:string = '';
+    first_lastname:string = '';
+    second_lastname:string = '';
+    about_me: string = '';
+    photo_profile: string = '';
 }

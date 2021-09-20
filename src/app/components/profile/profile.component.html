@@ -3,53 +3,53 @@
 
 <app-spinner *ngIf="load"></app-spinner>
 
-<div class="container shadow-lg p-3 mb-5 bg-light rounded">
-  <h1 class="text-center animated fadeIn faster animated fadeIn faster">
-    {{
-        this.perfil.first_name + ' ' +
-        this.perfil.second_name + ' ' +
-        this.perfil.first_lastname + ' ' +
-        this.perfil.second_lastname
-    }}
-  </h1>
-    <div class="row">
-      <div class="col-md-4">
-        <img class="img-fluid" src="{{this.perfil.photo_profile}}" alt="Foto de perfil">
+<div class="animate__animated animate__backInDown" *ngIf="!load">
+  <div class="container shadow-lg p-3 mb-5 bg-light rounded">
+    <h1 class="text-center">
+      {{  this.perfil.first_name + ' ' +
+          this.perfil.second_name + ' ' +
+          this.perfil.first_lastname + ' ' +
+          this.perfil.second_lastname}}
+    </h1>
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-fluid border border-5 border-primary p-1" src="{{this.perfil.photo_profile}}" alt="Foto de perfil">
+        </div>
+        <div class="col-md-8">
+          <h2>Sobre mi...</h2>.
+          <p class=" justify-content">{{this.perfil.about_me}}</p><hr>
+            <h1 class="text-center">Hobbies</h1>
+            <app-hobbies class="col-md-12"></app-hobbies>
+        </div>
       </div>
-      <div class="col-md-8">
-        <h2>Sobre mi...</h2>.
-        <p class=" justify-content">{{this.perfil.about_me}}</p><hr>
-          <h1 class="text-center">Hobbies</h1>
-          <app-hobbies class="col-md-12"></app-hobbies>
+
+      <div class="row">
+        <h1 class="text-center">Redes sociales</h1><hr>
+        <div class="col-md-12 text-center">
+          <a href="perfil"><i class="bi bi-facebook"></i></a>
+          <a href="perfil"><i class="bi bi-twitter"></i></a>
+          <a href="perfil"><i class="bi bi-youtube"></i></a>
+          <a href="perfil"><i class="bi bi-github"></i></a>
+          <a href="perfil"><i class="bi bi-instagram"></i></a>
+
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <h1 class="text-center">Redes sociales</h1><hr>
-      <div class="col-md-12 text-center">
-        <a href="perfil"><i class="bi bi-facebook"></i></a>
-        <a href="perfil"><i class="bi bi-twitter"></i></a>
-        <a href="perfil"><i class="bi bi-youtube"></i></a>
-        <a href="perfil"><i class="bi bi-github"></i></a>
-        <a href="perfil"><i class="bi bi-instagram"></i></a>
-
-      </div>
-    </div>
-</div>
-
-  <div class="container text-center">
-  <h1>Mis Proyectos</h1>
-  </div>
-  <div class="container p-3 mb-5 bg-light rounded ">
-    <app-last-projects></app-last-projects>
   </div>
 
     <div class="container text-center">
-    <h1>Experiencia Laboral</h1>
+    <h1>Mis Proyectos</h1>
     </div>
-    <div class="container">
-      <app-last-work-experience></app-last-work-experience>
+    <div class="container p-3 mb-5 bg-light rounded ">
+      <app-last-projects></app-last-projects>
     </div>
+
+      <div class="container text-center">
+      <h1>Experiencia Laboral</h1>
+      </div>
+      <div class="container">
+        <app-last-work-experience></app-last-work-experience>
+      </div>
+</div>
 
 
 
