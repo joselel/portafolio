@@ -38,6 +38,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 //Importaciones de angular Firebase
 //import { AngularFireModule } from '@angular/fire/compat';
@@ -53,6 +54,7 @@ import { LastProjectsComponent } from './components/profile/last-projects/last-p
 import { NgxSpinnerModule } from "ngx-spinner";
 import { LastWorkExperienceComponent } from './components/profile/last-work-experience/last-work-experience.component';
 import { SliderComponent } from './components/home/slider/slider.component';
+import { SpinnerComponent } from './components/shared/spinner/spinner.component';
 
 
 @NgModule({
@@ -82,7 +84,8 @@ import { SliderComponent } from './components/home/slider/slider.component';
     HobbiesComponent,
     LastProjectsComponent,
     LastWorkExperienceComponent,
-    SliderComponent
+    SliderComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -101,7 +104,8 @@ import { SliderComponent } from './components/home/slider/slider.component';
     MatProgressBarModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatProgressSpinnerModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers:

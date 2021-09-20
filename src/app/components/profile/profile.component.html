@@ -1,10 +1,17 @@
 
 <!--<button (click)="showmodal()">Mostrar alerta</button>-->
 
-  <ngx-spinner bdColor = "#fff" size = "medium" color = "rgb(67, 67, 199)" type = "square-jelly-box" [fullScreen] = "true" > <p style = "color: rgb(67, 67, 199)" > Cargando ... </p> </ngx-spinner>
+<app-spinner *ngIf="load"></app-spinner>
 
 <div class="container shadow-lg p-3 mb-5 bg-light rounded">
-  <h1 class="text-center">{{this.nombre}}</h1>
+  <h1 class="text-center animated fadeIn faster animated fadeIn faster">
+    {{
+        this.perfil.first_name + ' ' +
+        this.perfil.second_name + ' ' +
+        this.perfil.first_lastname + ' ' +
+        this.perfil.second_lastname
+    }}
+  </h1>
     <div class="row">
       <div class="col-md-4">
         <img class="img-fluid" src="{{this.perfil.photo_profile}}" alt="Foto de perfil">
@@ -20,11 +27,11 @@
     <div class="row">
       <h1 class="text-center">Redes sociales</h1><hr>
       <div class="col-md-12 text-center">
-        <i class="bi bi-facebook"></i>
-        <i class="bi bi-twitter"></i>
-        <i class="bi bi-youtube"></i>
-        <i class="bi bi-github"></i>
-        <i class="bi bi-instagram"></i>
+        <a href="perfil"><i class="bi bi-facebook"></i></a>
+        <a href="perfil"><i class="bi bi-twitter"></i></a>
+        <a href="perfil"><i class="bi bi-youtube"></i></a>
+        <a href="perfil"><i class="bi bi-github"></i></a>
+        <a href="perfil"><i class="bi bi-instagram"></i></a>
 
       </div>
     </div>
